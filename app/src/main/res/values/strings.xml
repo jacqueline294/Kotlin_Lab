@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Lab Project 1</string>
+    <string name="about_activity">About</string>
+    <string name="Greeting">WELCOME</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="about">ABOUT</string>
+    <string name="enter_username">ENTER USERNAME</string>
+    <string name="back">Back</string>
+    <string name="todo">TODO</string>
+    <string name="Sign_in_button">signed in</string>
+</resources>
