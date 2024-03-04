@@ -5,7 +5,14 @@
     <string name="sign_in">SIGN IN</string>
     <string name="about">ABOUT</string>
     <string name="enter_username">ENTER USERNAME</string>
+    <string name="password">ENTER PASSWORD</string>
     <string name="back">Back</string>
-    <string name="todo">TODO</string>
-    <string name="Sign_in_button">signed in</string>
+    <string name="Sign_in_button">LOGIN</string>
+    <string name="welcome_message">WELCOME TO SAFARI INDOOR PLAYGROUND</string>
+    <string name="welcome_page">welcome page</string>
+    <string name="Logo">logo</string>
+    <string name="pagelogo">page logo</string>
+    <string name="book">book button</string>
+    <string name="about_description">An indoor Family Fun Center with a restaurant guaranteed to change your mind about food at indoor play areas. Our Family Fun Center serves nothing but the best and highest quality from our pizza to our burgers (Angus Beef) to our wings to our famous cheese bread and to the freshest salad bar around. Don’t forget about our Dippin’ Dots for an after meal dessert or a summer dessert with the family.</string>
+
 </resources>

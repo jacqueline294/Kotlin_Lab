@@ -3,30 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutActivity">
+    tools:context=".AboutActivity"
+    android:background="@drawable/about">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
-        android:gravity="center">
+        android:textAlignment="center">
 
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/about_activity"
-            android:textSize="24sp"
-            tools:ignore="MissingConstraints" />
+            android:layout_width="236dp"
+            android:layout_height="539dp"
+            android:background="#CDC0CA33"
+            android:text="@string/about_description"
+            android:textColor="#FC011210"
+            android:textColorHighlight="#4A148C"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints,TextSizeCheck,TextContrastCheck" />
 
-    <Button
+        <Button
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/back"
             android:layout_marginTop="16dp"
+            android:text="@string/back"
             tools:ignore="MissingConstraints" />
-
 
 
     </LinearLayout>
