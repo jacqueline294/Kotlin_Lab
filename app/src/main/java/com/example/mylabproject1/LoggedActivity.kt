@@ -19,16 +19,14 @@ class LoggedActivity : AppCompatActivity() {
         val bookedTextView: TextView = findViewById(R.id.booked_text_view)
 
 
-        bookedTextView.visibility = TextView.GONE
-
-        calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
-
-            bookedTextView.visibility = TextView.VISIBLE
-            bookedTextView.text = "Booked"
-        }
-
         bookButton.setOnClickListener {
-
+            if (bookedTextView.visibility == TextView.VISIBLE) {
+                bookedTextView.visibility = TextView.GONE
+            } else {
+                bookedTextView.visibility = TextView.VISIBLE
+                bookedTextView.text = "Date Booked"
+            }
         }
+
     }
 }
