@@ -8,10 +8,10 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class SignInActivity : AppCompatActivity() {
+class SignActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+        setContentView(R.layout.activity_sign)
 
         val loginButton: Button = findViewById(R.id.login_btn)
         val usernameEditText: EditText = findViewById(R.id.username_edit_text)
@@ -22,7 +22,7 @@ class SignInActivity : AppCompatActivity() {
             val password = passwordEditText.text.toString()
 
             if (isValidCredentials(username, password)) {
-                val intent = Intent(this, LoggedInActivity::class.java)
+                val intent = Intent(this, LoggedActivity::class.java)
                 intent.putExtra("USERNAME", username)
                 startActivity(intent)
             } else {
