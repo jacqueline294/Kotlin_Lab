@@ -8,44 +8,88 @@
     tools:context=".SignInActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#708BC34A"
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="389dp"
+        android:layout_height="238dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/Logo"
+        app:layout_constraintBottom_toTopOf="@+id/username_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/safari"
+        tools:ignore="ImageContrastCheck" />
 
         <EditText
             android:id="@+id/username_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#5E4CAF50"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints=""
             android:hint="@string/enter_username"
             android:inputType="text"
             android:minHeight="48dp"
-            android:textColorHint="#004D40"
-            android:autofillHints="" />
+            android:textColorHint="#80DEEA"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:autofillHints="password"
             android:ems="10"
             android:hint="@string/password"
             android:inputType="textPassword"
             android:minHeight="48dp"
             android:textColor="#2B5F2D"
-            android:textColorHint="#004D40" />
+            android:textColorHint="#80DEEA"
+            app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username_edit_text" />
+
 
         <Button
             android:id="@+id/sign_in_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/Sign_in_button" />
-
-
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/Sign_in_button"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

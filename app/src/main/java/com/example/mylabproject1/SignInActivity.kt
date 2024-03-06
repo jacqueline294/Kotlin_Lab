@@ -1,12 +1,12 @@
+// SignInActivity.kt
 package com.example.mylabproject1
 
-
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,22 +15,27 @@ class SignInActivity : AppCompatActivity() {
 
         val signInButton: Button = findViewById(R.id.sign_in_button)
         val usernameEditText: EditText = findViewById(R.id.username_edit_text)
+        val passwordEditText: EditText = findViewById(R.id.editTextTextPassword)
 
         signInButton.setOnClickListener {
             val username = usernameEditText.text.toString()
-            if (isValidUser(username)) {
+            val password = passwordEditText.text.toString()
+            if (isValidCredentials(username, password)) {
                 val intent = Intent(this, LoggedInActivity::class.java)
                 intent.putExtra("USERNAME", username)
                 startActivity(intent)
             } else {
-                Toast.makeText(this, "Invalid username", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    private fun isValidUser(username: String): Boolean {
-        val validUsers = arrayOf("user1", "user2", "user3")
-        return validUsers.contains(username)
-    }
-}
+    private fun isValidCredentials(username: String, password: String): Boolean {
 
+        val validUsername = "user"
+        val validPassword = "password"
+
+        return username == validUsername && password == validPassword
+    }
+
+}
