@@ -13,13 +13,14 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        val signInButton: Button = findViewById(R.id.sign_in_button)
+        val loginButton: Button = findViewById(R.id.login_btn)
         val usernameEditText: EditText = findViewById(R.id.username_edit_text)
         val passwordEditText: EditText = findViewById(R.id.editTextTextPassword)
 
-        signInButton.setOnClickListener {
+        loginButton.setOnClickListener {
             val username = usernameEditText.text.toString()
             val password = passwordEditText.text.toString()
+
             if (isValidCredentials(username, password)) {
                 val intent = Intent(this, LoggedInActivity::class.java)
                 intent.putExtra("USERNAME", username)
@@ -31,11 +32,9 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun isValidCredentials(username: String, password: String): Boolean {
-
         val validUsername = "user"
         val validPassword = "password"
 
         return username == validUsername && password == validPassword
     }
-
 }
